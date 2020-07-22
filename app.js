@@ -12,7 +12,7 @@ app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
 
 app.use((req, res, next) => {
-    const error = new Error('Not found');
+    const error = new Error('Endpoint not found');
     error.status = 404;
     next(error);
 })
